@@ -43,4 +43,4 @@ Este proyecto es una aplicación Spring Boot 3 que consume la API REST pública 
 
 ```bash
 git clone https://github.com/joloarte/pokemonsoap.git
-cd proyecto-pokemonsoap
+cd pokemonsoap
