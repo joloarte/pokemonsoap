@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.com/pokemon"
+           targetNamespace="http://www.example.com/pokemon" elementFormDefault="qualified">
+
+    <!-- Find All -->
+    <xs:element name="getAllRequest">
+        <xs:complexType>
+            <xs:sequence>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetPokemonsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemons" type="tns:pokemon" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Find by name -->
+    <xs:element name="getPokemonNameRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonNameResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPokemonAbilitiesRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonAbilitiesResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getPokemonBaseExperienceRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonBaseExperienceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonHeldItemsRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonHeldItemsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonLocationAreaEncountersRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="pokemonName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPokemonLocationAreaEncountersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="response" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="pokemon">
+        <xs:sequence>
+            <xs:element name="id" type="xs:long"/>
+            <xs:element name="ip" type="xs:string"/>
+            <xs:element name="method" type="xs:string"/>
+            <xs:element name="dateRequest" type="xs:string"/>
+            <xs:element name="duration" type="xs:long"/>
+            <xs:element name="request" type="xs:string"/>
+            <xs:element name="response" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
